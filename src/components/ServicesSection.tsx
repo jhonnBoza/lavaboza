@@ -1,6 +1,5 @@
 import { ArrowRight } from 'lucide-react'
 import { SERVICES, WHATSAPP_LINK } from '../data/constants'
-import ServiceIllustration from './ServiceIllustration'
 
 export default function ServicesSection() {
   return (
@@ -27,9 +26,14 @@ export default function ServicesSection() {
               rel="noopener noreferrer"
               className="group flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-xl hover:border-lime-200 hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="relative flex items-center justify-center h-32 sm:h-36 md:h-40 bg-gradient-to-br from-slate-50 via-white to-lime-50/80 overflow-hidden">
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-lime-500/5 to-navy-800/5" />
-                <ServiceIllustration type={service.icon} className="relative z-10 group-hover:scale-105 transition-transform duration-500" />
+              <div className="relative h-40 sm:h-44 md:h-48 overflow-hidden bg-gray-100">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-900/30 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
               </div>
 
               <div className="flex flex-col flex-1 p-4 sm:p-5">

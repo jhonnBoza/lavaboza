@@ -30,17 +30,17 @@ export const HERO_STATS = [
 ]
 
 export const SERVICES = [
-  { title: 'Lavadoras', tagline: 'Automáticas y semiautomáticas', icon: 'washing-machine' },
-  { title: 'Refrigeradoras', tagline: 'Enfriamiento y compresores', icon: 'refrigerator' },
-  { title: 'Congeladoras', tagline: 'Verticales y horizontales', icon: 'snowflake' },
-  { title: 'Microondas', tagline: 'Placa, magnetrón y puerta', icon: 'microwave' },
-  { title: 'Licuadoras', tagline: 'Motor, aspas y base', icon: 'blender' },
-  { title: 'Ollas Arroceras', tagline: 'Resistencia y panel digital', icon: 'cooking-pot' },
-  { title: 'Ollas a Presión', tagline: 'Válvulas y sellos', icon: 'gauge' },
-  { title: 'Jarras Hervidoras', tagline: 'Base y apagado automático', icon: 'coffee' },
-  { title: 'Cocinas', tagline: 'Hornos y encimeras', icon: 'flame' },
-  { title: 'Venta de Repuestos', tagline: 'Todo tipo de repuestos', icon: 'parts' },
-  { title: 'Electrodomésticos', tagline: 'Diagnóstico y mantenimiento', icon: 'plug' },
+  { title: 'Lavadoras', tagline: 'Automáticas y semiautomáticas', image: '/services/lavadoras.jpg' },
+  { title: 'Refrigeradoras', tagline: 'Enfriamiento y compresores', image: '/services/refrigeradoras.jpg' },
+  { title: 'Congeladoras', tagline: 'Verticales y horizontales', image: '/services/congeladoras.jpg' },
+  { title: 'Microondas', tagline: 'Placa, magnetrón y puerta', image: '/services/microondas.jpg' },
+  { title: 'Licuadoras', tagline: 'Motor, aspas y base', image: '/services/licuadoras.jpg' },
+  { title: 'Ollas Arroceras', tagline: 'Resistencia y panel digital', image: '/services/ollas-arroceras.jpg' },
+  { title: 'Ollas a Presión', tagline: 'Válvulas y sellos', image: '/services/ollas-presion.jpg' },
+  { title: 'Jarras Hervidoras', tagline: 'Base y apagado automático', image: '/services/jarras-hervidoras.jpg' },
+  { title: 'Cocinas', tagline: 'Hornos y encimeras', image: '/services/cocinas.jpg' },
+  { title: 'Venta de Repuestos', tagline: 'Todo tipo de repuestos', image: '/services/repuestos.jpg' },
+  { title: 'Electrodomésticos', tagline: 'Diagnóstico y mantenimiento', image: '/services/electrodomesticos.jpg' },
 ]
 
 export const WHY_US = [
