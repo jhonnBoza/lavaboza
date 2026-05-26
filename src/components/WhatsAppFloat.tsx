@@ -14,7 +14,7 @@ export default function WhatsAppFloat() {
   }, [])
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 pb-[env(safe-area-inset-bottom)] pr-[env(safe-area-inset-right)]">
       {showTooltip && (
         <div className="absolute bottom-full right-0 mb-3 bg-white text-navy-800 text-sm font-medium px-4 py-2 rounded-xl shadow-lg whitespace-nowrap animate-fade-in">
           ¿Necesitas ayuda? Escríbenos
@@ -26,7 +26,7 @@ export default function WhatsAppFloat() {
         href={WHATSAPP_LINK}
         target="_blank"
         rel="noopener noreferrer"
-        className="relative flex items-center justify-center w-14 h-14 bg-lime-500 hover:bg-lime-600 text-white rounded-full shadow-lg shadow-lime-500/30 transition-all hover:scale-110"
+        className="relative flex items-center justify-center w-14 h-14 bg-lime-500 hover:bg-lime-600 text-white rounded-full shadow-lg shadow-lime-500/30 transition-all hover:scale-110 touch-manipulation"
         aria-label="Contactar por WhatsApp"
         onMouseEnter={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}

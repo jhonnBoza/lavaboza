@@ -18,16 +18,16 @@ function WhatsAppIcon({ className }: { className?: string }) {
 
 export default function ProcessSection() {
   return (
-    <section id="proceso" className="py-20 bg-white">
+    <section id="proceso" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="inline-block bg-blue-50 text-navy-700 font-medium text-sm px-4 py-1.5 rounded-full mb-4">
             Simple y transparente
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-navy-800 mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-800 mb-3 sm:mb-4">
             Proceso de Atención
           </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-500 max-w-2xl mx-auto leading-relaxed text-sm sm:text-base px-2">
             Trabajamos con un proceso claro, rápido y sin sorpresas. Sabemos que tu tiempo es valioso
             y actuamos con esa prioridad.
           </p>
@@ -39,7 +39,7 @@ export default function ProcessSection() {
             aria-hidden
           />
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-6">
             {PROCESS_STEPS.map((step) => {
               const Icon = iconMap[step.icon]
               const isGreen = step.variant === 'green'
@@ -82,12 +82,12 @@ export default function ProcessSection() {
           </div>
         </div>
 
-        <div className="text-center mt-14">
+        <div className="text-center mt-10 sm:mt-14 px-2">
           <a
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-600 text-white font-bold px-8 py-4 rounded-full transition-colors shadow-lg shadow-lime-500/25"
+            className="inline-flex items-center justify-center gap-2 bg-lime-500 hover:bg-lime-600 text-white font-bold px-6 sm:px-8 py-3.5 sm:py-4 rounded-full transition-colors shadow-lg shadow-lime-500/25 w-full sm:w-auto touch-manipulation"
           >
             <WhatsAppIcon className="w-5 h-5" />
             Iniciar el proceso ahora

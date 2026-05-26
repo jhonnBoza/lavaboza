@@ -20,6 +20,13 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? 'hidden' : ''
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [mobileOpen])
+
   const handleNavClick = (href: string) => {
     setMobileOpen(false)
     document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
@@ -28,16 +35,16 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white shadow-md py-2' : 'bg-white/95 backdrop-blur-sm py-3'
+        scrolled ? 'bg-white shadow-md py-2' : 'bg-white/95 backdrop-blur-sm py-2.5 sm:py-3'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between gap-4">
-          <a href="#" className="flex items-center flex-shrink-0 h-11 sm:h-12">
+        <div className="flex items-center justify-between gap-3">
+          <a href="#" className="flex items-center flex-shrink-0 min-w-0 h-9 sm:h-11 lg:h-12">
             <img
               src="/logo-bozatech-nav.png"
               alt="Bozatech - Servicio técnico de electrodomésticos"
-              className="h-full w-auto max-w-[200px] sm:max-w-[240px] object-contain object-left"
+              className="h-full w-auto max-w-[140px] sm:max-w-[200px] lg:max-w-[240px] object-contain object-left"
             />
           </a>
 
@@ -74,8 +81,9 @@ export default function Navbar() {
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden p-2 text-navy-800"
-            aria-label="Menú"
+            className="lg:hidden p-2 -mr-2 text-navy-800 touch-manipulation"
+            aria-label={mobileOpen ? 'Cerrar menú' : 'Abrir menú'}
+            aria-expanded={mobileOpen}
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -83,27 +91,30 @@ export default function Navbar() {
       </div>
 
       {mobileOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-100 shadow-lg">
+        <div className="lg:hidden bg-white border-t border-gray-100 shadow-lg max-h-[calc(100dvh-4rem)] overflow-y-auto">
           <nav className="flex flex-col px-4 py-4 gap-1">
             {NAV_LINKS.map((link) => (
               <button
                 key={link.href}
                 onClick={() => handleNavClick(link.href)}
-                className="text-left py-3 px-2 text-gray-700 font-medium hover:text-lime-600 hover:bg-gray-50 rounded-lg transition-colors"
+                className="text-left py-3.5 px-3 text-gray-700 font-medium hover:text-lime-600 hover:bg-gray-50 rounded-lg transition-colors touch-manipulation"
               >
                 {link.label}
               </button>
             ))}
             <div className="border-t border-gray-100 mt-2 pt-4 flex flex-col gap-3">
-              <a href={`tel:+${PHONE_LINK}`} className="flex items-center gap-2 text-navy-800 font-semibold px-2">
-                <Phone className="w-4 h-4 text-lime-500" />
+              <a
+                href={`tel:+${PHONE_LINK}`}
+                className="flex items-center gap-2 text-navy-800 font-semibold px-3 py-2 touch-manipulation"
+              >
+                <Phone className="w-4 h-4 text-lime-500 flex-shrink-0" />
                 {PHONE}
               </a>
               <a
                 href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-lime-500 text-white font-semibold py-3 rounded-full"
+                className="inline-flex items-center justify-center gap-2 bg-lime-500 text-white font-semibold py-3.5 rounded-full touch-manipulation"
               >
                 <WhatsAppIcon className="w-4 h-4" />
                 WhatsApp

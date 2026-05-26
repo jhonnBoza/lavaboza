@@ -6,16 +6,16 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <section id="faq" className="py-20 bg-gray-50">
+    <section id="faq" className="section-padding bg-gray-50">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
-          <span className="inline-block text-lime-600 font-semibold text-sm uppercase tracking-wider mb-3">
+        <div className="text-center mb-10 sm:mb-14">
+          <span className="inline-block text-lime-600 font-semibold text-xs sm:text-sm uppercase tracking-wider mb-3">
             Preguntas Frecuentes
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-navy-800 mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-800 mb-3 sm:mb-4">
             Resolvemos tus dudas
           </h2>
-          <p className="text-gray-500">
+          <p className="text-gray-500 text-sm sm:text-base px-2">
             Encuentra respuestas a las preguntas más comunes sobre nuestro servicio.
           </p>
         </div>
@@ -30,10 +30,10 @@ export default function FAQSection() {
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="w-full flex items-center justify-between gap-4 p-5 text-left"
+                  className="w-full flex items-center justify-between gap-3 sm:gap-4 p-4 sm:p-5 text-left touch-manipulation"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-semibold text-navy-800">{item.question}</span>
+                  <span className="font-semibold text-navy-800 text-sm sm:text-base leading-snug">{item.question}</span>
                   <ChevronDown
                     className={`w-5 h-5 text-lime-500 flex-shrink-0 transition-transform duration-300 ${
                       isOpen ? 'rotate-180' : ''

@@ -13,7 +13,7 @@ export default function ServiceIllustration({ type, className = '' }: ServiceIll
 
 const illustrations: Record<string, React.ReactNode> = {
   'washing-machine': (
-    <svg viewBox="0 0 120 120" className="w-28 h-28 sm:w-32 sm:h-32" aria-hidden>
+    <svg viewBox="0 0 120 120" className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32" aria-hidden>
       <defs>
         <linearGradient id="wash-body" x1="0" y1="0" x2="1" y2="1">
           <stop offset="0%" stopColor="#e2e8f0" />
@@ -31,7 +31,7 @@ const illustrations: Record<string, React.ReactNode> = {
     </svg>
   ),
   refrigerator: (
-    <svg viewBox="0 0 120 120" className="w-28 h-28 sm:w-32 sm:h-32" aria-hidden>
+    <svg viewBox="0 0 120 120" className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32" aria-hidden>
       <rect x="36" y="14" width="48" height="92" rx="6" fill="#e2e8f0" stroke="#94a3b8" strokeWidth="2" />
       <line x1="36" y1="52" x2="84" y2="52" stroke="#94a3b8" strokeWidth="2" />
       <rect x="72" y="28" width="4" height="16" rx="2" fill="#64748b" />
@@ -44,7 +44,7 @@ const illustrations: Record<string, React.ReactNode> = {
     </svg>
   ),
   snowflake: (
-    <svg viewBox="0 0 120 120" className="w-28 h-28 sm:w-32 sm:h-32" aria-hidden>
+    <svg viewBox="0 0 120 120" className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32" aria-hidden>
       <rect x="34" y="20" width="52" height="80" rx="6" fill="#f1f5f9" stroke="#94a3b8" strokeWidth="2" />
       <rect x="40" y="28" width="40" height="50" rx="4" fill="#e0f2fe" />
       <g className="service-snow-float">
@@ -56,7 +56,7 @@ const illustrations: Record<string, React.ReactNode> = {
     </svg>
   ),
   microwave: (
-    <svg viewBox="0 0 120 120" className="w-28 h-28 sm:w-32 sm:h-32" aria-hidden>
+    <svg viewBox="0 0 120 120" className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32" aria-hidden>
       <rect x="22" y="34" width="76" height="52" rx="6" fill="#e2e8f0" stroke="#64748b" strokeWidth="2" />
       <rect x="28" y="40" width="44" height="40" rx="3" fill="#1e293b" />
       <g className="service-microwave-wave">
@@ -68,7 +68,7 @@ const illustrations: Record<string, React.ReactNode> = {
     </svg>
   ),
   blender: (
-    <svg viewBox="0 0 120 120" className="w-28 h-28 sm:w-32 sm:h-32" aria-hidden>
+    <svg viewBox="0 0 120 120" className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32" aria-hidden>
       <rect x="44" y="72" width="32" height="20" rx="4" fill="#64748b" />
       <path d="M48 72 L52 38 L68 38 L72 72 Z" fill="#94a3b8" opacity="0.5" />
       <rect x="50" y="28" width="20" height="14" rx="3" fill="#e2e8f0" stroke="#64748b" strokeWidth="1.5" />
@@ -79,7 +79,7 @@ const illustrations: Record<string, React.ReactNode> = {
     </svg>
   ),
   'cooking-pot': (
-    <svg viewBox="0 0 120 120" className="w-28 h-28 sm:w-32 sm:h-32" aria-hidden>
+    <svg viewBox="0 0 120 120" className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32" aria-hidden>
       <ellipse cx="60" cy="86" rx="30" ry="8" fill="#94a3b8" />
       <rect x="32" y="58" width="56" height="28" rx="10" fill="#e2e8f0" stroke="#64748b" strokeWidth="2" />
       <path d="M34 58 Q60 48 86 58" fill="#f8fafc" stroke="#94a3b8" strokeWidth="2" />
@@ -98,7 +98,7 @@ const illustrations: Record<string, React.ReactNode> = {
     </svg>
   ),
   gauge: (
-    <svg viewBox="0 0 120 120" className="w-28 h-28 sm:w-32 sm:h-32" aria-hidden>
+    <svg viewBox="0 0 120 120" className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32" aria-hidden>
       <ellipse cx="60" cy="84" rx="28" ry="8" fill="#94a3b8" />
       <path d="M34 84 L34 58 Q34 48 60 48 Q86 48 86 58 L86 84 Z" fill="#e2e8f0" stroke="#64748b" strokeWidth="2" />
       <rect x="36" y="52" width="48" height="8" rx="3" fill="#cbd5e1" stroke="#64748b" strokeWidth="1.5" />
@@ -116,7 +116,7 @@ const illustrations: Record<string, React.ReactNode> = {
     </svg>
   ),
   coffee: (
-    <svg viewBox="0 0 120 120" className="w-28 h-28 sm:w-32 sm:h-32" aria-hidden>
+    <svg viewBox="0 0 120 120" className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32" aria-hidden>
       <rect x="42" y="76" width="36" height="12" rx="3" fill="#64748b" />
       <path d="M46 76 L50 44 Q60 40 70 44 L74 76 Z" fill="#e2e8f0" stroke="#94a3b8" strokeWidth="2" />
       <path d="M74 52 Q88 52 88 62 Q88 72 74 72" fill="none" stroke="#64748b" strokeWidth="3" strokeLinecap="round" />
@@ -128,7 +128,7 @@ const illustrations: Record<string, React.ReactNode> = {
     </svg>
   ),
   flame: (
-    <svg viewBox="0 0 120 120" className="w-28 h-28 sm:w-32 sm:h-32" aria-hidden>
+    <svg viewBox="0 0 120 120" className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32" aria-hidden>
       <rect x="26" y="72" width="68" height="28" rx="5" fill="#475569" stroke="#334155" strokeWidth="1.5" />
       <rect x="34" y="78" width="52" height="16" rx="2" fill="#1e293b" stroke="#64748b" strokeWidth="1.5" />
       <rect x="40" y="82" width="40" height="8" rx="1" fill="#334155" opacity="0.6" />
@@ -155,7 +155,7 @@ const illustrations: Record<string, React.ReactNode> = {
     </svg>
   ),
   plug: (
-    <svg viewBox="0 0 120 120" className="w-28 h-28 sm:w-32 sm:h-32" aria-hidden>
+    <svg viewBox="0 0 120 120" className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32" aria-hidden>
       <rect x="22" y="24" width="76" height="72" rx="10" fill="#f8fafc" stroke="#cbd5e1" strokeWidth="2" />
       <g className="service-appliance-float" style={{ transformOrigin: '42px 48px' }}>
         <rect x="30" y="36" width="22" height="28" rx="4" fill="#e2e8f0" stroke="#94a3b8" strokeWidth="1.5" />

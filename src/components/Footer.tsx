@@ -3,7 +3,7 @@ import { NAV_LINKS, FOOTER_SERVICES, PHONE, PHONE_LINK, EMAIL, WHATSAPP_LINK, CO
 
 export default function Footer() {
   return (
-    <footer className="bg-navy-900 text-white pt-16 pb-8">
+    <footer className="bg-navy-900 text-white pt-12 sm:pt-16 pb-6 sm:pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           <div>
@@ -78,7 +78,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="border-t border-white/10 pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <p className="text-blue-200/40 text-sm">
             © {new Date().getFullYear()} Bozatech. Todos los derechos reservados.
           </p>

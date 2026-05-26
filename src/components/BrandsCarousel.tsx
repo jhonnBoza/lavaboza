@@ -13,12 +13,12 @@ export default function BrandsCarousel({ brands }: BrandsCarouselProps) {
         {track.map((brand, index) => (
           <div
             key={`${brand}-${index}`}
-            className="flex-shrink-0 flex items-center justify-center bg-transparent rounded-2xl px-4 py-3 min-w-[240px] h-[120px] sm:min-w-[280px] sm:h-[140px]"
+            className="flex-shrink-0 flex items-center justify-center bg-transparent rounded-2xl px-3 py-2 min-w-[160px] h-[90px] sm:min-w-[220px] sm:h-[120px] md:min-w-[280px] md:h-[140px]"
           >
             <img
               src={getBrandLogoUrl(brand)}
               alt={brand}
-              className="h-16 sm:h-20 w-[220px] sm:w-[260px] object-contain object-center"
+              className="h-12 sm:h-16 md:h-20 w-[160px] sm:w-[200px] md:w-[260px] object-contain object-center"
               loading="lazy"
               draggable={false}
             />

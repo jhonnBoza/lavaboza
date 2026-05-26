@@ -36,7 +36,7 @@ function AnimatedStat({
 
   return (
     <div className="text-center">
-      <p className="text-3xl lg:text-4xl font-extrabold text-lime-400 mb-1 tabular-nums">
+      <p className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-lime-400 mb-1 tabular-nums">
         {prefix}{count}{suffix}
       </p>
       <p className="text-blue-200/70 text-sm">{label}</p>
@@ -67,16 +67,16 @@ export default function WhyUsSection() {
   }, [])
 
   return (
-    <section id="por-que" className="py-20 bg-gray-50">
+    <section id="por-que" className="section-padding bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
-          <span className="inline-block text-lime-600 font-semibold text-sm uppercase tracking-wider mb-3">
+        <div className="text-center mb-10 sm:mb-14">
+          <span className="inline-block text-lime-600 font-semibold text-xs sm:text-sm uppercase tracking-wider mb-3">
             ¿Por qué elegirnos?
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-navy-800 mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-800 mb-3 sm:mb-4 px-2">
             La confianza de más de 500 familias en el Perú
           </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto">
+          <p className="text-gray-500 max-w-2xl mx-auto text-sm sm:text-base px-2">
             Somos especialistas en reparación de electrodomésticos con años de experiencia y compromiso con la calidad.
           </p>
         </div>
@@ -102,7 +102,7 @@ export default function WhyUsSection() {
 
         <div
           ref={statsRef}
-          className="bg-navy-800 rounded-3xl p-8 lg:p-12 grid grid-cols-2 lg:grid-cols-4 gap-8"
+          className="bg-navy-800 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 grid grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-8"
         >
           {STATS_BANNER.map((stat) => (
             <AnimatedStat key={stat.label} {...stat} active={statsVisible} />

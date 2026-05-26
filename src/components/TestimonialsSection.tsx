@@ -28,22 +28,22 @@ export default function TestimonialsSection() {
   const visible = TESTIMONIALS.slice(current * visibleCount, current * visibleCount + visibleCount)
 
   return (
-    <section id="testimonios" className="py-20 bg-white">
+    <section id="testimonios" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
-          <div>
-            <span className="inline-block text-lime-600 font-semibold text-sm uppercase tracking-wider mb-3">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10 sm:mb-14">
+          <div className="text-center lg:text-left">
+            <span className="inline-block text-lime-600 font-semibold text-xs sm:text-sm uppercase tracking-wider mb-3">
               Testimonios
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-navy-800 mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-800 mb-3 sm:mb-4">
               Lo que dicen nuestros clientes
             </h2>
-            <p className="text-gray-500 max-w-xl">
+            <p className="text-gray-500 max-w-xl mx-auto lg:mx-0 text-sm sm:text-base">
               Más de 500 familias en el Perú confían en Bozatech para reparar sus electrodomésticos.
             </p>
           </div>
 
-          <div className="flex items-center gap-4 bg-gray-50 rounded-2xl px-5 py-4 border border-gray-100">
+          <div className="flex items-center justify-center gap-4 bg-gray-50 rounded-2xl px-4 sm:px-5 py-4 border border-gray-100 w-full sm:w-auto mx-auto lg:mx-0">
             <div className="flex">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
@@ -56,7 +56,7 @@ export default function TestimonialsSection() {
           </div>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
           {visible.map((testimonial) => (
             <div
               key={testimonial.name}

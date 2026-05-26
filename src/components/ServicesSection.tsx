@@ -4,21 +4,21 @@ import ServiceIllustration from './ServiceIllustration'
 
 export default function ServicesSection() {
   return (
-    <section id="servicios" className="py-20 bg-white">
+    <section id="servicios" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
-          <span className="inline-block text-lime-600 font-semibold text-sm uppercase tracking-wider mb-3">
+        <div className="text-center mb-10 sm:mb-14">
+          <span className="inline-block text-lime-600 font-semibold text-xs sm:text-sm uppercase tracking-wider mb-3">
             Nuestros Servicios
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-navy-800 mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-800 mb-3 sm:mb-4 px-2">
             Reparamos todo tipo de electrodomésticos
           </h2>
-          <p className="text-gray-500 max-w-xl mx-auto">
+          <p className="text-gray-500 max-w-xl mx-auto text-sm sm:text-base px-2">
             Servicio técnico a domicilio en todo el Perú con garantía por escrito.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
+        <div className="grid grid-cols-1 min-[480px]:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
           {SERVICES.map((service) => (
             <a
               key={service.title}
@@ -27,7 +27,7 @@ export default function ServicesSection() {
               rel="noopener noreferrer"
               className="group flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-xl hover:border-lime-200 hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="relative flex items-center justify-center h-36 sm:h-40 bg-gradient-to-br from-slate-50 via-white to-lime-50/80 overflow-hidden">
+              <div className="relative flex items-center justify-center h-32 sm:h-36 md:h-40 bg-gradient-to-br from-slate-50 via-white to-lime-50/80 overflow-hidden">
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-lime-500/5 to-navy-800/5" />
                 <ServiceIllustration type={service.icon} className="relative z-10 group-hover:scale-105 transition-transform duration-500" />
               </div>
