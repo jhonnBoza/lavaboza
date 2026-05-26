@@ -178,4 +178,18 @@ const illustrations: Record<string, React.ReactNode> = {
       </g>
     </svg>
   ),
+  parts: (
+    <svg viewBox="0 0 120 120" className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32" aria-hidden>
+      <rect x="28" y="52" width="64" height="40" rx="6" fill="#e2e8f0" stroke="#64748b" strokeWidth="2" />
+      <rect x="34" y="58" width="20" height="14" rx="2" fill="#94a3b8" />
+      <rect x="58" y="58" width="26" height="14" rx="2" fill="#cbd5e1" />
+      <rect x="34" y="76" width="50" height="10" rx="2" fill="#f8fafc" stroke="#94a3b8" strokeWidth="1" />
+      <circle cx="44" cy="42" r="10" fill="none" stroke="#64748b" strokeWidth="3" />
+      <circle cx="44" cy="42" r="3" fill="#84cc16" className="service-pulse-dot" />
+      <rect x="62" y="34" width="22" height="12" rx="3" fill="#64748b" />
+      <g className="service-appliance-float">
+        <rect x="66" y="38" width="14" height="6" rx="1" fill="#84cc16" opacity="0.8" />
+      </g>
+    </svg>
+  ),
 }

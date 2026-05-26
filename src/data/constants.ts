@@ -2,8 +2,16 @@ export const VISIT_COST = 50
 export const PHONE = '+51 942 341 214'
 export const PHONE_LINK = '51942341214'
 export const WHATSAPP_LINK = `https://wa.me/${PHONE_LINK}?text=Hola%2C%20necesito%20un%20servicio%20t%C3%A9cnico%20para%20mi%20electrodom%C3%A9stico.`
-export const EMAIL = 'contacto@bozatech.pe'
+export const EMAIL = 'bozagerardo906@gmail.com'
 export const COUNTRY = 'Perú'
+export const BUSINESS_HOURS = 'Atención las 24 horas'
+export const WARRANTY_PERIOD = '90 días'
+
+/** Centro geográfico de Perú — cobertura nacional en mapa */
+export const MAP_CENTER = { lat: -9.19, lng: -75.015 }
+export const MAP_ZOOM = 5
+export const MAPS_LINK = `https://www.google.com/maps/@${MAP_CENTER.lat},${MAP_CENTER.lng},${MAP_ZOOM}z`
+export const MAP_EMBED_SRC = `https://maps.google.com/maps?q=${MAP_CENTER.lat},${MAP_CENTER.lng}&hl=es&z=${MAP_ZOOM}&output=embed`
 
 export const NAV_LINKS = [
   { label: 'Servicios', href: '#servicios' },
@@ -16,8 +24,8 @@ export const NAV_LINKS = [
 
 export const HERO_STATS = [
   { icon: 'star', value: '4.9★', label: 'Calificación promedio' },
-  { icon: 'shield', value: '1 año', label: 'Garantía en reparaciones' },
-  { icon: 'clock', value: '<24h', label: 'Tiempo de respuesta' },
+  { icon: 'shield', value: WARRANTY_PERIOD, label: 'Garantía en reparaciones' },
+  { icon: 'clock', value: '24h', label: 'Atención continua' },
   { icon: 'map', value: 'Todo', label: 'El Perú' },
 ]
 
@@ -31,6 +39,7 @@ export const SERVICES = [
   { title: 'Ollas a Presión', tagline: 'Válvulas y sellos', icon: 'gauge' },
   { title: 'Jarras Hervidoras', tagline: 'Base y apagado automático', icon: 'coffee' },
   { title: 'Cocinas', tagline: 'Hornos y encimeras', icon: 'flame' },
+  { title: 'Venta de Repuestos', tagline: 'Todo tipo de repuestos', icon: 'parts' },
   { title: 'Electrodomésticos', tagline: 'Diagnóstico y mantenimiento', icon: 'plug' },
 ]
 
@@ -42,7 +51,7 @@ export const WHY_US = [
   },
   {
     title: 'Garantía por escrito',
-    description: 'Todas nuestras reparaciones incluyen garantía de 1 año por escrito.',
+    description: `Reparaciones con garantía de ${WARRANTY_PERIOD} por la falla reparada. No cubre daños por mal uso del equipo.`,
     icon: 'file-check',
   },
   {
@@ -52,7 +61,7 @@ export const WHY_US = [
   },
   {
     title: 'Repuestos originales',
-    description: 'Utilizamos repuestos de calidad y originales para cada marca.',
+    description: 'Venta de todo tipo de repuestos e instalación con calidad garantizada para cada marca.',
     icon: 'package',
   },
   {
@@ -160,7 +169,7 @@ export const PROCESS_STEPS = [
     tagVariant: 'blue' as const,
     variant: 'navy' as const,
     description:
-      'Verificamos que el equipo funcione perfectamente. Te entregamos garantía por escrito y quedamos disponibles para cualquier seguimiento.',
+      `Verificamos que el equipo funcione correctamente. Entregamos garantía por escrito de ${WARRANTY_PERIOD} por la falla reparada, sin cubrir mal uso.`,
     icon: 'circle-check',
   },
 ]
@@ -217,11 +226,15 @@ export const FAQ_ITEMS = [
   },
   {
     question: '¿Qué garantía ofrecen en las reparaciones?',
-    answer: 'Todas nuestras reparaciones incluyen garantía por escrito de 1 año. Si el mismo problema se repite dentro del periodo de garantía, lo solucionamos sin costo adicional.',
+    answer: `Las reparaciones incluyen garantía por escrito de ${WARRANTY_PERIOD} sobre la falla corregida y el repuesto instalado. No aplica si el equipo se daña por mal uso, golpes, sobrecarga o manipulación indebida.`,
   },
   {
-    question: '¿Trabajan los fines de semana?',
-    answer: 'Sí, atendemos de lunes a sábado de 8:00 a 18:00 y domingos de 9:00 a 14:00 con cita previa. Para emergencias, contáctanos por WhatsApp.',
+    question: '¿Cuál es su horario de atención?',
+    answer: 'Atendemos las 24 horas, los 7 días de la semana. Escríbenos por WhatsApp o llámanos en cualquier momento y coordinamos tu servicio.',
+  },
+  {
+    question: '¿Venden repuestos para electrodomésticos?',
+    answer: 'Sí, vendemos todo tipo de repuestos originales y compatibles para lavadoras, refrigeradoras, microondas, licuadoras y más. Consulta disponibilidad por WhatsApp indicando marca y modelo.',
   },
   {
     question: '¿Reparan todas las marcas de electrodomésticos?',
@@ -268,5 +281,6 @@ export const FOOTER_SERVICES = [
   'Licuadoras',
   'Ollas Arroceras',
   'Cocinas',
+  'Venta de repuestos',
   'Electrodomésticos',
 ]

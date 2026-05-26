@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin, Clock } from 'lucide-react'
-import { NAV_LINKS, FOOTER_SERVICES, PHONE, PHONE_LINK, EMAIL, WHATSAPP_LINK, COUNTRY } from '../data/constants'
+import { NAV_LINKS, FOOTER_SERVICES, PHONE, PHONE_LINK, EMAIL, WHATSAPP_LINK, COUNTRY, BUSINESS_HOURS } from '../data/constants'
 
 export default function Footer() {
   return (
@@ -13,7 +13,7 @@ export default function Footer() {
               className="h-12 w-auto max-w-[220px] mb-4 object-contain object-left"
             />
             <p className="text-blue-200/60 text-sm leading-relaxed mb-4">
-              Servicio técnico especializado en reparación de electrodomésticos a domicilio en todo el Perú.
+              Servicio técnico, venta de repuestos y reparación de electrodomésticos a domicilio en todo el Perú.
             </p>
             <div className="flex gap-3">
               <a href="#" className="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-lime-500 transition-colors" aria-label="Facebook">
@@ -72,7 +72,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2 text-blue-200/60 text-sm">
                 <Clock className="w-4 h-4 text-lime-400" />
-                Lun-Sáb 8:00-18:00
+                {BUSINESS_HOURS}
               </li>
             </ul>
           </div>

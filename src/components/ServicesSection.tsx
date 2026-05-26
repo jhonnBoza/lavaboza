@@ -14,7 +14,7 @@ export default function ServicesSection() {
             Reparamos todo tipo de electrodomésticos
           </h2>
           <p className="text-gray-500 max-w-xl mx-auto text-sm sm:text-base px-2">
-            Servicio técnico a domicilio en todo el Perú con garantía por escrito.
+            Servicio técnico, venta de repuestos y atención las 24 horas en todo el Perú.
           </p>
         </div>
 

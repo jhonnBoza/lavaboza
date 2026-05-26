@@ -1,5 +1,5 @@
 import { ArrowRight, Star, Shield, Clock, MapPin, Users } from 'lucide-react'
-import { HERO_STATS, WHATSAPP_LINK } from '../data/constants'
+import { HERO_STATS, WHATSAPP_LINK, WARRANTY_PERIOD } from '../data/constants'
 
 const statIcons = {
   star: Star,
@@ -56,8 +56,8 @@ export default function Hero() {
             </h1>
 
             <p className="text-base sm:text-lg text-blue-100/80 max-w-lg mx-auto lg:mx-0 leading-relaxed">
-              Técnicos certificados, diagnóstico inmediato y garantía por escrito.
-              Reparamos lavadoras, refrigeradoras, microondas y más en menos de 24 horas.
+              Técnicos certificados, diagnóstico inmediato, venta de repuestos y garantía por escrito.
+              Reparamos lavadoras, refrigeradoras, microondas y más con atención las 24 horas.
             </p>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-1 sm:pt-2 justify-center lg:justify-start">
@@ -90,12 +90,12 @@ export default function Hero() {
             </div>
 
             <div className="flex gap-2 sm:gap-3 mt-4 w-full max-w-[260px] sm:max-w-sm md:max-w-md lg:hidden">
-              <HeroBadge icon={Shield} title="Garantía" subtitle="1 año" subtitleClass="text-navy-800" />
+              <HeroBadge icon={Shield} title="Garantía" subtitle={WARRANTY_PERIOD} subtitleClass="text-navy-800" />
               <HeroBadge icon={Users} title="+500 clientes" subtitle="satisfechos" />
             </div>
 
             <div className="hidden lg:block absolute top-8 -right-10">
-              <HeroBadge icon={Shield} title="Garantía" subtitle="1 año" subtitleClass="text-navy-800" />
+              <HeroBadge icon={Shield} title="Garantía" subtitle={WARRANTY_PERIOD} subtitleClass="text-navy-800" />
             </div>
 
             <div className="hidden lg:block absolute bottom-16 -left-4">

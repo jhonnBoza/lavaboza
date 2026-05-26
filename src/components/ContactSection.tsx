@@ -1,7 +1,5 @@
 import { Phone, Mail, MapPin, Clock, MessageCircle, ExternalLink } from 'lucide-react'
-import { PHONE, PHONE_LINK, EMAIL, WHATSAPP_LINK, COVERAGE_AREAS, COUNTRY } from '../data/constants'
-
-const MAPS_LINK = 'https://www.google.com/maps/search/?api=1&query=Peru'
+import { PHONE, PHONE_LINK, EMAIL, WHATSAPP_LINK, COVERAGE_AREAS, COUNTRY, BUSINESS_HOURS, MAPS_LINK, MAP_EMBED_SRC } from '../data/constants'
 
 export default function ContactSection() {
   return (
@@ -24,7 +22,7 @@ export default function ContactSection() {
             { icon: Phone, label: 'Teléfono', value: PHONE, href: `tel:+${PHONE_LINK}` },
             { icon: MessageCircle, label: 'WhatsApp', value: 'Escríbenos ahora', href: WHATSAPP_LINK },
             { icon: Mail, label: 'Email', value: EMAIL, href: `mailto:${EMAIL}`, breakAll: true },
-            { icon: Clock, label: 'Horario', value: 'Lun-Sáb 8:00-18:00', href: undefined },
+            { icon: Clock, label: 'Horario', value: BUSINESS_HOURS, href: undefined },
           ].map((item) => (
             <div key={item.label} className="bg-gray-50 rounded-2xl p-5 sm:p-6 border border-gray-100 text-center">
               <div className="w-11 h-11 sm:w-12 sm:h-12 bg-lime-500/10 rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
@@ -73,10 +71,11 @@ export default function ContactSection() {
             <div className="absolute inset-0 grid-bg opacity-10 pointer-events-none z-10" />
             <iframe
               title="Cobertura Bozatech en Perú"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=-81.35%2C-18.35%2C-68.65%2C-0.03&layer=mapnik&marker=-12.0464%2C-77.0428"
+              src={MAP_EMBED_SRC}
               className="relative z-0 w-full h-[240px] sm:h-[360px] lg:h-[460px] border-0 grayscale-[20%] contrast-[1.05]"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
             />
           </div>
 
